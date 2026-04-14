@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9th Xavier Ateneo SHS Commencement Exercises – Final Instructions</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; font-size: 15px; line-height: 1.7; background: #f5f3ee; color: #1a1a1a; }
+
+  header {
+    background: #1a3a5c;
+    color: #fff;
+    padding: 2rem 1.5rem 1.5rem;
+    text-align: center;
+  }
+  header .school-name { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.75; margin-bottom: 6px; }
+  header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  header .subtitle { font-size: 13px; opacity: 0.8; }
+  header .venue { font-size: 12px; opacity: 0.65; margin-top: 4px; }
+
+  .toc {
+    background: #fff;
+    border-left: 4px solid #1a3a5c;
+    margin: 1.5rem auto;
+    max-width: 820px;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+  }
+  .toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #1a3a5c; margin-bottom: 8px; }
+  .toc ol { padding-left: 1.2rem; }
+  .toc li { margin: 3px 0; }
+  .toc a { color: #1a3a5c; font-size: 13px; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  main { max-width: 820px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+  section { background: #fff; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.07); }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+  }
+  .section-header:hover { background: #f0ede8; }
+
+  .section-header .title-wrap { display: flex; align-items: center; gap: 10px; }
+  .section-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .section-header h2 { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+
+  .chevron { font-size: 12px; color: #888; transition: transform 0.25s; }
+  .open .chevron { transform: rotate(180deg); }
+
+  .section-body { display: none; padding: 0 1.25rem 1.25rem; border-top: 1px solid #ede9e2; }
+  .section-body.visible { display: block; }
+
+  /* Schedule tables */
+  .schedule-block { margin-bottom: 1rem; }
+  .schedule-block h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1a3a5c; margin: 1rem 0 0.4rem; }
+  .schedule-date { font-weight: 700; font-size: 14px; color: #1a3a5c; margin-bottom: 2px; }
+  table.sched { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 0.75rem; }
+  table.sched td { padding: 4px 8px 4px 0; vertical-align: top; }
+  table.sched td:first-child { white-space: nowrap; color: #555; font-size: 13px; width: 90px; }
+
+  /* Rules list */
+  ol.rules, ul.rules { padding-left: 1.3rem; margin-top: 0.5rem; }
+  ol.rules li, ul.rules li { margin-bottom: 0.5rem; font-size: 14px; }
+  ol.rules li b, ul.rules li b { color: #1a3a5c; }
+
+  /* Dress code grid */
+  .dress-group { margin-top: 1rem; }
+  .dress-group h3 { font-size: 14px; font-weight: 700; border-bottom: 1px solid #ede9e2; padding-bottom: 4px; margin-bottom: 8px; }
+  .dress-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .dress-allowed { background: #f0faf4; border-radius: 8px; padding: 10px 12px; }
+  .dress-notallowed { background: #fff5f5; border-radius: 8px; padding: 10px 12px; }
+  .dress-allowed h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: #1a7a40; margin-bottom: 6px; }
+  .dress-notallowed h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: #b91c1c; margin-bottom: 6px; }
+  .dress-allowed ul, .dress-notallowed ul { padding-left: 1.1rem; font-size: 13px; line-height: 1.6; }
+
+  /* Sub-collapsible */
+  .sub-section { border: 1px solid #ede9e2; border-radius: 8px; margin-top: 0.75rem; overflow: hidden; }
+  .sub-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.65rem 1rem; cursor: pointer; background: #faf9f6;
+  }
+  .sub-header:hover { background: #f0ede8; }
+  .sub-header h3 { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+  .sub-body { display: none; padding: 0.75rem 1rem; border-top: 1px solid #ede9e2; }
+  .sub-body.visible { display: block; }
+
+  /* Important notice */
+  .notice {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 12px;
+    font-size: 13px;
+    margin: 0.75rem 0;
+  }
+  .notice strong { color: #92400e; }
+
+  .important-badge {
+    display: inline-block;
+    background: #b91c1c;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Pill tags */
+  .pill { display: inline-block; font-size: 12px; padding: 2px 9px; border-radius: 12px; margin: 2px; font-weight: 600; }
+  .pill-green { background: #d1fae5; color: #065f46; }
+  .pill-red { background: #fee2e2; color: #991b1b; }
+
+  /* Colors for section icons */
+  .ic-blue { background: #dbeafe; }
+  .ic-gold { background: #fef3c7; }
+  .ic-green { background: #d1fae5; }
+  .ic-red { background: #fee2e2; }
+  .ic-purple { background: #ede9fe; }
+  .ic-teal { background: #ccfbf1; }
+  .ic-orange { background: #ffedd5; }
+
+  @media (max-width: 560px) {
+    .dress-cols { grid-template-columns: 1fr; }
+    header h1 { font-size: 18px; }
+  }
+
+  .divider { height: 1px; background: #ede9e2; margin: 0.75rem 0; }
+  p.note { font-size: 13px; color: #555; margin-top: 0.5rem; }
+  .signed-by { font-size: 13px; color: #444; margin-top: 0.5rem; font-style: italic; }
+
+  /* Parking map note */
+  .map-note { background: #f0f4ff; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin-top: 0.75rem; }
+  .map-note b { color: #1e40af; }
+
+  footer { text-align: center; font-size: 12px; color: #888; padding: 1rem; }
+
+  /* Maps & Images Gallery */
+  .map-gallery { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.75rem; }
+  .map-card {
+    border: 1px solid #ede9e2;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #faf9f6;
+  }
+  .map-card-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 0.65rem 1rem;
+    background: #f0ede8;
+    border-bottom: 1px solid #ede9e2;
+  }
+  .map-card-header .map-badge {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #fff; background: #1a3a5c;
+    padding: 2px 8px; border-radius: 4px; white-space: nowrap;
+  }
+  .map-card-header .map-title { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+  .map-card-header .map-desc { font-size: 12px; color: #666; margin-left: auto; white-space: nowrap; }
+  .map-img-wrap {
+    position: relative;
+    background: #e8e4dc;
+    min-height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .map-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .map-img-wrap:hover img { transform: scale(1.01); }
+  .map-img-wrap .zoom-hint {
+    position: absolute; bottom: 8px; right: 8px;
+    background: rgba(0,0,0,0.5); color: #fff;
+    font-size: 11px; padding: 3px 8px; border-radius: 4px;
+    pointer-events: none;
+  }
+  .map-img-placeholder {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px; padding: 2.5rem 1rem; color: #888; text-align: center;
+    min-height: 180px;
+  }
+  .map-img-placeholder .ph-icon { font-size: 36px; opacity: 0.4; }
+  .map-img-placeholder .ph-filename {
+    font-size: 13px; font-weight: 700; color: #1a3a5c;
+    background: #e8eef7; padding: 4px 12px; border-radius: 6px;
+    font-family: monospace;
+  }
+  .map-img-placeholder .ph-hint { font-size: 12px; color: #aaa; }
+  .map-caption {
+    padding: 8px 12px;
+    font-size: 12px; color: #666;
+    border-top: 1px solid #ede9e2;
+    background: #fff;
+  }
+
+  /* Lightbox */
+  .lightbox-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.88); z-index: 9999;
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 12px;
+    padding: 1rem;
+  }
+  .lightbox-overlay.active { display: flex; }
+  .lightbox-overlay img { max-width: 95vw; max-height: 85vh; border-radius: 6px; object-fit: contain; }
+  .lightbox-overlay .lb-caption { color: #ddd; font-size: 13px; text-align: center; }
+  .lightbox-overlay .lb-close {
+    position: fixed; top: 14px; right: 18px;
+    font-size: 28px; color: #fff; cursor: pointer; line-height: 1;
+    background: none; border: none; padding: 0;
+  }
+  .lightbox-overlay .lb-close:hover { color: #f59e0b; }
+
+  @media (max-width: 560px) {
+    .map-card-header .map-desc { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="school-name">9th Xavier Ateneo Senior High School</div>
+  <h1>Commencement Exercises</h1>
+  <div class="subtitle">SY 2025–2026 &nbsp;·&nbsp; Final Instructions for Candidates and Their Parents</div>
+  <div class="venue">Xavier Ateneo Senior High School Covered Courts</div>
+</header>
+
+<div class="toc" style="max-width:820px;margin:1.25rem auto;">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1">Schedule of Ceremonies</a></li>
+    <li><a href="#s2">Other Schedules Leading to Graduation</a></li>
+    <li><a href="#s3">Attire, Dress Code &amp; Punctuality</a></li>
+    <li><a href="#s4">What to Bring</a></li>
+    <li><a href="#s5">Basic Disposition</a></li>
+    <li><a href="#s6">Photographs</a></li>
+    <li><a href="#s7">Donning Ceremony</a></li>
+    <li><a href="#s8">Conferring of Graduates</a></li>
+    <li><a href="#s9">Vehicle Pass, Parent Pass &amp; Parking</a></li>
+    <li><a href="#s10">Commencement Exercises – Farewell Gauntlet</a></li>
+    <li><a href="#s11">Security Advisory</a></li>
+    <li><a href="#s12">Safety Advisory</a></li>
+    <li><a href="#s13">Health &amp; Welfare Advisory</a></li>
+    <li><a href="#s14">Acknowledgment &amp; Agreement Form</a></li>
+    <li><a href="#s15">Maps &amp; Images Reference</a></li>
+  </ol>
+</div>
+
+<main>
+
+<!-- SECTION 1 -->
+<section id="s1">
+  <div class="section-header open" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-blue">📅</div>
+      <h2>Schedule of Ceremonies</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body visible">
+
+    <div class="schedule-block">
+      <div class="schedule-date">April 15, 2026 (Wednesday)</div>
+      <div style="font-size:13px;color:#555;margin-bottom:6px;">Baccalaureate Mass and Convocation</div>
+      <table class="sched">
+        <tr><td>6:30 AM</td><td>Assembly</td></tr>
+        <tr><td>6:45 AM</td><td>Processional</td></tr>
+        <tr><td>7:30 AM</td><td>Baccalaureate Mass</td></tr>
+        <tr><td>9:15 AM</td><td>Academic Convocation</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="schedule-block">
+      <div class="schedule-date">April 16, 2026 (Thursday)</div>
+      <div style="font-size:13px;color:#555;margin-bottom:6px;">Commencement Exercises – <strong>Group 1</strong><br>INS, MACH, MECX, HUMSS, STEM A</div>
+      <table class="sched">
+        <tr><td>6:15 AM</td><td>Assembly</td></tr>
+        <tr><td>6:30 AM</td><td>Donning</td></tr>
+        <tr><td>6:50 AM</td><td>Processional</td></tr>
+        <tr><td>7:30 AM</td><td>Ceremonies</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="schedule-block">
+      <div class="schedule-date">April 17, 2026 (Friday)</div>
+      <div style="font-size:13px;color:#555;margin-bottom:6px;">Commencement Exercises – <strong>Group 2</strong><br>ABM, STEM B</div>
+      <table class="sched">
+        <tr><td>6:15 AM</td><td>Assembly</td></tr>
+        <tr><td>6:30 AM</td><td>Donning</td></tr>
+        <tr><td>6:50 AM</td><td>Processional</td></tr>
+        <tr><td>7:30 AM</td><td>Ceremonies</td></tr>
+      </table>
+    </div>
+
+    <div class="notice"><strong>IMPORTANT:</strong> Only the following will be allowed inside the SHS Covered Court: (a) Maximum of 2 companions (parents/guardians) per graduate; (b) The candidate/graduate; (c) Duly authorized personnel; (d) Invited guests.</div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section id="s2">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-purple">🗓</div>
+      <h2>Other Schedules Leading to Graduation</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <table class="sched" style="margin-top:0.75rem;">
+      <tr><td style="width:160px;">March 17–19, 2026</td><td>Grade 12 Final Exam</td></tr>
+      <tr><td>March 19, 2026</td><td>2PM–5PM – Graduation Orientation, Presentation of Grad Song</td></tr>
+      <tr><td>March 23–27, 2026</td><td>Final PT Days</td></tr>
+      <tr><td>April 1, 2026</td><td>Delayed Exam and Submission of Final Grades</td></tr>
+      <tr><td>April 6, 2026</td><td>Final Grade Deliberations for G12 and G11</td></tr>
+    </table>
+
+    <div class="divider"></div>
+    <h3 style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:#1a3a5c;margin-bottom:0.5rem;">Graduation Rehearsals</h3>
+
+    <table class="sched">
+      <tr>
+        <td style="width:120px;font-weight:700;color:#1a1a1a;">April 6, 2026</td>
+        <td>
+          7AM–11AM: Simulation for April 15 Program<br>
+          1PM–5PM: Simulation for April 16 Program
+        </td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;color:#1a1a1a;">April 7, 2026</td>
+        <td>
+          6:30AM–11AM: Simulation for April 15 Program<br>
+          1PM–5PM: Simulation for April 17 Program
+        </td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;color:#1a1a1a;">April 8, 2026</td>
+        <td>6:15AM–11AM: Simulation for April 15 Program</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;color:#1a1a1a;">April 10, 2026</td>
+        <td>
+          Posting of Candidates for Graduation, G12 List of Honors and Awards<br>
+          6:15AM–11AM: Simulation for April 15 Program, Final Class Photo Taking, Releasing of Graduation Paraphernalia
+        </td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;color:#1a1a1a;">April 13, 2026</td>
+        <td>Graduation Ball 2026</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;color:#1a1a1a;">April 14, 2026</td>
+        <td>
+          Awardees' Rehearsals<br>
+          8–10AM: April 16 Group of Awardees<br>
+          10AM–12PM: April 17 Group of Awardees
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section id="s3">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-teal">👔</div>
+      <h2>Attire, Dress Code &amp; Punctuality</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+
+    <div class="sub-section">
+      <div class="sub-header" onclick="toggleSub(this)">
+        <h3>For Male Students</h3>
+        <span class="chevron" style="font-size:12px;color:#888;">▼</span>
+      </div>
+      <div class="sub-body visible">
+        <div class="dress-cols">
+          <div class="dress-allowed">
+            <h4>✔ Allowed</h4>
+            <ul>
+              <li>White, Off-white, or Cream Barong Tagalog (with collar, long sleeves)</li>
+              <li>Plain white/cream undershirt</li>
+              <li>Black formal slacks</li>
+              <li>Black leather shoes</li>
+              <li>Black formal socks</li>
+              <li>Prescribed haircut (2×3) – Gentleman's cut</li>
+              <li>Natural hair color only</li>
+            </ul>
+          </div>
+          <div class="dress-notallowed">
+            <h4>✘ Not Allowed</h4>
+            <ul>
+              <li>Earrings</li>
+              <li>Sling bags</li>
+              <li>Large bags</li>
+              <li>Paper bags</li>
+              <li>Any bulky items</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div class="sub-header" onclick="toggleSub(this)">
+        <h3>For Female Students</h3>
+        <span class="chevron" style="font-size:12px;color:#888;">▼</span>
+      </div>
+      <div class="sub-body visible">
+        <div class="dress-cols">
+          <div class="dress-allowed">
+            <h4>✔ Allowed</h4>
+            <ul>
+              <li>White, Off-white, or Cream Lady Barong (three-fourth sleeves, Chinese collar)</li>
+              <li>Plain white/cream female undershirt</li>
+              <li>Black pencil-cut or A-line skirt (knee length; back slit not more than 4 inches) or Black formal slacks</li>
+              <li>Black Hijab for Muslim Women</li>
+              <li>Black closed shoes with heels not exceeding 2 inches</li>
+              <li>Light day make-up</li>
+              <li>Skin tone stockings</li>
+              <li>Stud earrings only</li>
+              <li>Long hair must be fixed in a bun or ponytail, brushed away from the face and nape</li>
+              <li>Natural hair color only</li>
+              <li>Handbag or hand purse only</li>
+            </ul>
+          </div>
+          <div class="dress-notallowed">
+            <h4>✘ Not Allowed</h4>
+            <ul>
+              <li>Boots</li>
+              <li>Stiletto high-heeled shoes</li>
+              <li>Sling bags</li>
+              <li>Large bags</li>
+              <li>Paper bags</li>
+              <li>Any bulky items</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div class="sub-header" onclick="toggleSub(this)">
+        <h3>Attire Guidelines for Parents</h3>
+        <span class="chevron" style="font-size:12px;color:#888;">▼</span>
+      </div>
+      <div class="sub-body">
+        <p style="font-size:14px;margin-bottom:8px;">To maintain the dignity and solemnity of the Graduation Ceremony, parents and guests are kindly requested to come in semi-formal or formal attire.</p>
+        <ul class="rules">
+          <li><b>Fathers:</b> Barong Tagalog or collared polo with slacks and closed shoes</li>
+          <li><b>Mothers:</b> Dress, blouse with skirt or slacks, or Filipiniana-inspired attire</li>
+        </ul>
+        <div class="notice" style="margin-top:0.75rem;">Please avoid wearing T-shirts with large prints, sleeveless shirts, shorts, ripped jeans, slippers, or flip-flops.</div>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-top:0.75rem;"><strong>Garlands, corsages, other ornaments, and/or flowers</strong> may be given and worn but <strong>only after the recessional of the Commencement Exercises.</strong><br><br>Coming late is discouraged.<br><br>All graduates must look for their Faculty Coordinators for proper guidance before entering the building on both the Baccalaureate Mass and the Commencement Exercises.</div>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section id="s4">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-gold">🎒</div>
+      <h2>What to Bring</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>Candidates are instructed to bring their <b>Sablay</b>.</li>
+      <li>Make sure you have your own <b>handkerchief and water supply (in a tumbler)</b>. You may also bring foldable or portable lollipop rechargeable fans for your use during the ceremonies, as long as they do not cause undue baggage on your part.</li>
+      <li>You may bring <b>biscuits and candies, but not chocolates</b>, as they may melt before being consumed.</li>
+      <li>Parents must bring their <b>admission passes/ribbons</b> during Commencement Exercises.</li>
+      <li>Xavier University is committed to the preservation of the environment. <b>Chewing gum, disposable single-use plastics, and water bottles will not be allowed on campus.</b> Graduates, parents, and guests are requested to bring their hydration tumblers. Water stations are available strategically inside the courts, and refilling is free.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section id="s5">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-green">🙏</div>
+      <h2>Basic Disposition</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>Candidates are to come <b>ahead of time</b> to avoid undue delay. Take breakfast or a heavy meal prior to attending the ceremonies.</li>
+      <li>Help maintain the solemnity of all ceremonies by participating actively. Avoid unnecessary noise/movements.</li>
+      <li>Mobile phones should be <b>turned off or put in silent mode</b>. Candidates are to refrain from using their phones while the ceremonies are ongoing.</li>
+      <li>As a courtesy to and out of respect for your fellow graduates, you and your family are requested to remain in your seats <b>until the conclusion of the ceremonies</b>.</li>
+      <li><b>Picture-taking is allowed only during the "Sablay" donning ceremony and after the graduation rites.</b> Strictly, No Picture-Taking is allowed during the ceremonies, even if you are stationed in your place. All Candidates, parents, and guests are to refrain from taking pictures from the floor while the ceremonies are ongoing.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section id="s6">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-teal">📷</div>
+      <h2>Photographs</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>The <b>XU Bookcenter</b> will be our Official XU Graduation Photo In-Charge. All photo transactions shall be done with this office. A fee of <b>₱200</b> will be charged for three shots for soft copies.</li>
+      <li>Awardees with their parents may have their pictures taken at the pinning area. Hard copies of the photos will be availed by the provider outside the venue after the ceremonies.</li>
+      <li>A <b>photobooth</b> is available for group, family or individual captures before and after ceremonies.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 7 -->
+<section id="s7">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-gold">🎓</div>
+      <h2>Donning Ceremony <span style="font-size:12px;font-weight:400;color:#888;">(April 16 &amp; 17, 2026 – 6:30 AM)</span></h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>The Donning Ceremony will be held <b>outside the Covered Courts</b> prior to the Commencement Exercises processional.</li>
+      <li>Candidates are to <b>assemble at the lanes by 6:15 AM</b> with their parents on one side.</li>
+      <li>At the first strains of music, candidates should turn and face their parents/guardians and present the sablay to them. Then, the parents/guardians are requested to <b>don the Sablay to the candidates and position it on the left shoulder–right hip configuration.</b></li>
+      <li>The Overall Chair instructs candidates to return to their respective lines and prepare for the processional. Parents are then requested to clear the processional lane and proceed to the Covered Courts.</li>
+      <li>Ahead of time, the Candidates with their parents are expected to <b>rehearse on their own the proper way of donning the "sablay"</b>.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 8 -->
+<section id="s8">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-gold">🏅</div>
+      <h2>Conferring of Graduates</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>After the President has declared the candidates as official graduates of XUSHS, the graduates are to <b>transfer their sablay to the right-shoulder left-hip position</b> and be seated.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 9 -->
+<section id="s9">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-blue">🚗</div>
+      <h2>Vehicle Pass, Parent Pass &amp; Parking</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+
+    <div class="sub-section">
+      <div class="sub-header" onclick="toggleSub(this)">
+        <h3>Parent Pass <span style="font-size:12px;font-weight:400;color:#777;">(Released April 10, 2026)</span></h3>
+        <span class="chevron" style="font-size:12px;color:#888;">▼</span>
+      </div>
+      <div class="sub-body">
+        <ol class="rules" type="a">
+          <li>Every candidate shall claim <b>two (2) Parent Passes</b> from their moderator and give them to their parents. Parents shall surrender these passes upon entry to the Covered Courts during Commencement Exercises. Upon entry, all Parents/guardians shall present themselves and their bags for security inspection.</li>
+          <li>For parents of the awardees, <b>two (2) Ribbon Passes</b> shall be issued instead. Parents are advised to pin their ribbons on their left chest before going through the inspection lane.</li>
+          <li>There will be Inspection lanes for each entrance — one for females and another for males — for order and a smooth entrance to the Covered Courts.</li>
+          <li>Candidates are strongly advised that <b>only two representatives</b> may be allowed to enter the Covered Courts to witness the proceedings.</li>
+          <li><b>Children below 15 years are not allowed inside the campus.</b> Seats are limited for the parents. Those with health conditions are discouraged from entering the Covered Courts.</li>
+          <li>Bringing large bags is highly discouraged.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div class="sub-header" onclick="toggleSub(this)">
+        <h3>Vehicle Pass <span style="font-size:12px;font-weight:400;color:#777;">(Applications: March 19 – Releasing: April 10, 2026)</span></h3>
+        <span class="chevron" style="font-size:12px;color:#888;">▼</span>
+      </div>
+      <div class="sub-body">
+        <ol class="rules" type="a">
+          <li>There are limited parking spaces in the Pueblo Campus. Only <b>ONE pass will be issued to a candidate</b> on a first-come, first-served basis. To register, please fill in the form at:<br>
+          <a href="https://bit.ly/4s0kmtP" target="_blank" style="color:#1a3a5c;font-weight:700;">https://bit.ly/4s0kmtP</a><br>between <b>March 19, 2026 to April 6, 2026</b>.</li>
+          <li>Requirements for registration:
+            <ul style="margin-top:4px;padding-left:1.2rem;font-size:13px;">
+              <li>Photocopy of the Vehicle's OR and CR</li>
+              <li>Scanned copy of the Vehicle Driver's License</li>
+            </ul>
+          The PS shall issue the pass on <b>April 10, 2026</b>.
+          </li>
+          <li>Note: <b>Vehicle Pass is non-assurance of parking slot</b> due to limited space. Hence, the first-come, first-served policy applies. Upon entering the school premises, the driver/owner must surrender the Vehicle Pass to the Guard on Duty.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <div class="sub-header" onclick="toggleSub(this)">
+        <h3>Parking Advisory</h3>
+        <span class="chevron" style="font-size:12px;color:#888;">▼</span>
+      </div>
+      <div class="sub-body">
+        <ol class="rules" type="a">
+          <li>Emergency Response Vehicles and Dignitaries will be given priority parking spaces at the back of the Covered Courts.</li>
+          <li>Signages are displayed for guidance.</li>
+          <li>Graduates with vehicles shall enter through the <b>JHS gate (3)</b> and proceed to <b>(2) for drop-off</b>. Available parking spaces are found in 1, 2, 3, 4, and 5 on a first-come, first-served basis.</li>
+        </ol>
+        <div class="map-note">
+          <b>Gates &amp; Parking Reference:</b><br>
+          Gate 1 – Closed from Vehicular Traffic except for VIPs, Dignitaries, Red Cross. To park at 6.<br>
+          Gate 3 – Vehicular Entry &nbsp;|&nbsp; Gate 10 – Vehicular Entry &nbsp;|&nbsp; Gate 6 – Exit Only<br>
+          Available Parking Areas: 2, 3, 4, 5<br>
+          Parking 4 &amp; 5 – Parking on either side is allowed<br>
+          Parking 2 &amp; 3 – Observe one side parking only<br>
+          No Parking at 1<br>
+          <br>
+          <a href="#s15" style="color:#1e40af;font-size:12px;font-weight:700;">→ View Gates &amp; Parking Map in Section 15</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 10 -->
+<section id="s10">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-purple">🎊</div>
+      <h2>Commencement Exercises – Farewell Gauntlet</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>The <b>Farewell Gauntlet</b> is the XUSHS Community Tradition in sending off its alumni into responsible adult life in the outside world. As a symbolic gesture of trust and confidence to its graduates, the faculty and staff, upon a recession, shall line up at either side of the center aisle in Honor Guard fashion to applaud the graduates. Graduates shall line up along the outside portions of the cluster and march through the gauntlet of teachers, moderators, mentors, and administrators as they exit. Hence, we request the graduates' family and friends to <b>remain seated</b> as we perform this tradition.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 11 -->
+<section id="s11">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-red">🔒</div>
+      <h2>Security Advisory</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>All visitors to the XUSHS will be subjected to <b>security checks</b>. Bags will be checked, and frisking will be conducted. Vehicles will also be inspected. Guests are not allowed to enter the courts until the security sweep has concluded.</li>
+      <li>No parent, candidate, or guest shall be allowed in the courts <b>before 6 AM</b> to allow for a canine sweep.</li>
+      <li>As a precaution, you are reminded to watch your personal belongings. XU is not liable should you lose items of value while inside its premises.</li>
+      <li>Report any suspicious item, activity, or individual you observe to the nearest committee member or security.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 12 -->
+<section id="s12">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-orange">⚠️</div>
+      <h2>Safety Advisory</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>While inside the courts, in case of an emergency that requires immediate evacuation from the facility, please take the nearest exit and proceed to the evacuation assembly area.</li>
+      <li><b>In case of fire</b>, an alarm will go off. Proceed to the nearest assembly area: <em>The front area parking space or the lane alongside the canteen.</em></li>
+      <li><b>In case of an earthquake</b>, proceed to the front area parking space or the lane alongside the canteen.</li>
+      <li>Always remain calm. Walk fast and do not panic.</li>
+    </ol>
+    <div class="map-note" style="margin-top:0.75rem;">
+      <b>Evacuation Areas (refer to campus map):</b><br>
+      Area 1 – Primary indoor assembly point<br>
+      Area 2 – Secondary assembly area<br>
+      Area 3 – Third assembly area<br>
+      Emergency exits are located on all four sides of the Covered Courts.<br>
+      <br>
+      <a href="#s15" style="color:#1e40af;font-size:12px;font-weight:700;">→ View Evacuation Areas Map &amp; Emergency Exit Diagram in Section 15</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 13 -->
+<section id="s13">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-green">❤️</div>
+      <h2>Health &amp; Welfare Advisory</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <ol class="rules">
+      <li>In adhering to the Department of Education guidelines, all personnel, students, parents, and other guests <b>exhibiting respiratory infections are not to attend</b> any of the 2-day activities. We advise those with respiratory infection symptoms to stay home and view the proceedings online.</li>
+      <li><b>Children below 15 years are not allowed inside the Covered Courts.</b> Seats are limited to the parents of the graduates only. Please consider making alternative arrangements for very young children and relatives sensitive to heat and exhaustion. Persons with disabilities or lingering health conditions are discouraged from entering the Covered Courts.</li>
+      <li>Please take a full meal before coming to the ceremonies. The ceremony is estimated to last until <b>11:30 AM</b>. <b>Candidates may bring candies or biscuits, but not chocolates, as they easily melt.</b></li>
+      <li>XUSHS is doing its best to make you stay comfortable inside the courts. However, due to limited logistics, ventilation measures may be insufficient. Please come in comfortable wear. Ladies are discouraged from wearing high-heeled shoes or stilettos. <b>Bring your foldable fans and water tumblers.</b></li>
+      <li>Medic stations and a recovery area are also in place. An ambulance is also on stand-by.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 14 -->
+<section id="s14">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-blue">📝</div>
+      <h2>Acknowledgment &amp; Agreement Form</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+    <p style="font-size:14px;margin:0.5rem 0 1rem;">This form serves as a formal acknowledgment that you have received, read, and understood the document entitled "Final Instructions for Candidates and Their Parents." It also signifies your commitment to abide by all the guidelines, policies, and procedures stated therein.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1rem;">
+      <div>
+        <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:#1a3a5c;margin-bottom:6px;">Student Information</h3>
+        <div style="font-size:13px;margin-bottom:4px;">Name of Candidate: <span style="display:inline-block;width:180px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+        <div style="font-size:13px;">Grade/Section: <span style="display:inline-block;width:190px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+      </div>
+      <div>
+        <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:#1a3a5c;margin-bottom:6px;">Parent/Guardian Information</h3>
+        <div style="font-size:13px;margin-bottom:4px;">Name of Parent/Guardian: <span style="display:inline-block;width:140px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+        <div style="font-size:13px;">Contact Number: <span style="display:inline-block;width:160px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:#1a3a5c;margin-bottom:6px;">Acknowledgment</h3>
+    <p style="font-size:13px;margin-bottom:6px;">We hereby affirm that:</p>
+    <ol class="rules">
+      <li>We have received and carefully read the "Final Instructions for Candidates and Their Parents."</li>
+      <li>We fully understand the expectations, requirements, and guidelines stated in the document.</li>
+      <li>We agree to comply with all instructions and policies outlined therein.</li>
+      <li>We understand that failure to adhere to these guidelines may result in appropriate actions by the school administration.</li>
+    </ol>
+
+    <div class="divider" style="margin:1rem 0;"></div>
+
+    <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:#1a3a5c;margin-bottom:8px;">Signatures</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:13px;">
+      <div>
+        <div>Signature of Candidate: <span style="display:inline-block;width:120px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+        <div style="margin-top:6px;">Date: <span style="display:inline-block;width:160px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+      </div>
+      <div>
+        <div>Signature of Parent/Guardian: <span style="display:inline-block;width:90px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+        <div style="margin-top:6px;">Date: <span style="display:inline-block;width:160px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:1rem 0;"></div>
+    <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:#888;margin-bottom:8px;">For School Use Only</h3>
+    <div style="font-size:13px;display:flex;gap:24px;flex-wrap:wrap;">
+      <div>Received by: <span style="display:inline-block;width:180px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+      <div>Date Received: <span style="display:inline-block;width:150px;border-bottom:1px solid #ccc;">&nbsp;</span></div>
+    </div>
+    <div class="notice" style="margin-top:0.75rem;"><strong>This signed form must be submitted on or before March 27, 2026.</strong></div>
+  </div>
+</section>
+
+<!-- SECTION 15 -->
+<section id="s15">
+  <div class="section-header" onclick="toggle(this)">
+    <div class="title-wrap">
+      <div class="section-icon ic-blue">🗺️</div>
+      <h2>Maps &amp; Images Reference</h2>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body">
+
+    <p style="font-size:13px;color:#555;margin:0.75rem 0 1rem;">
+      Place the image files listed below in the <strong>same folder</strong> as <code>index.html</code>.
+      They will automatically appear here. Click any image to enlarge it.
+    </p>
+
+    <div class="map-gallery">
+
+      <!-- MAP 1: Gates & Parking -->
+      <div class="map-card">
+        <div class="map-card-header">
+          <span class="map-badge">Map 1</span>
+          <span class="map-title">Gates &amp; Parking</span>
+          <span class="map-desc">Referenced in: Section 9 – Vehicle Pass &amp; Parking</span>
+        </div>
+        <div class="map-img-wrap" onclick="openLightbox(this)">
+          <img
+            src="map_gates_parking.jpg"
+            alt="Gates and Parking Map"
+            style="width: 100%; max-width: 400px; margin: 0 auto; display: block;"
+            onerror="this.parentElement.innerHTML=placeholderHTML('map_gates_parking.jpg','Gates &amp; Parking aerial map showing gate locations, entry/exit points, and available parking areas numbered 1–6 along Masterson Ave and El Camino Real St.')">
+          <span class="zoom-hint">🔍 Click to enlarge</span>
+        </div>
+        <div class="map-caption">
+          <strong>Legend:</strong>
+          Gate 1 – Closed (VIPs/Dignitaries/Red Cross only, park at 6) &nbsp;·&nbsp;
+          Gate 3 – Vehicular Entry &nbsp;·&nbsp;
+          Gate 6 – Exit Only &nbsp;·&nbsp;
+          Gate 10 – Vehicular Entry &nbsp;·&nbsp;
+          Parking 4 &amp; 5 – Both sides allowed &nbsp;·&nbsp;
+          Parking 2 &amp; 3 – One side only &nbsp;·&nbsp;
+          No parking at 1
+        </div>
+      </div>
+
+      <!-- MAP 2: Evacuation Areas -->
+      <div class="map-card">
+        <div class="map-card-header">
+          <span class="map-badge">Map 2</span>
+          <span class="map-title">Evacuation Areas</span>
+          <span class="map-desc">Referenced in: Section 12 – Safety Advisory</span>
+        </div>
+        <div class="map-img-wrap" onclick="openLightbox(this)">
+          <img
+            src="map_evacuation_areas.jpg"
+            alt="Evacuation Areas Map"
+            style="width: 100%; max-width: 400px; margin: 0 auto; display: block;"
+            onerror="this.parentElement.innerHTML=placeholderHTML('map_evacuation_areas.jpg','Campus aerial map showing three numbered evacuation assembly areas accessible from gate entrances along El Camino Real St.')">
+          <span class="zoom-hint">🔍 Click to enlarge</span>
+        </div>
+        <div class="map-caption">
+          <strong>Assembly Areas:</strong>
+          Area 1 – Primary assembly point (front parking area / lane alongside canteen) &nbsp;·&nbsp;
+          Area 2 – Secondary area &nbsp;·&nbsp;
+          Area 3 – Third area near Gate 1 &nbsp;·&nbsp;
+          Accessible via Gates 3, 4, and 6 along El Camino Real St.
+        </div>
+      </div>
+
+      <!-- DIAGRAM: Emergency Exits (Covered Court) -->
+      <div class="map-card">
+        <div class="map-card-header">
+          <span class="map-badge">Diagram</span>
+          <span class="map-title">Emergency Exits – Covered Courts Floor Plan</span>
+          <span class="map-desc">Referenced in: Section 12 – Safety Advisory</span>
+        </div>
+        <div class="map-img-wrap" onclick="openLightbox(this)">
+          <img
+            src="diagram_emergency_exits.jpg"
+            alt="Emergency Exits Diagram"
+            style="width: 50%; max-width: 200px; margin: 0 auto; display: block;"
+            onerror="this.parentElement.innerHTML=placeholderHTML('diagram_emergency_exits.jpg','Floor plan diagram of the SHS Covered Courts showing EXIT doors on all four sides with directional arrows indicating evacuation routes.')">
+          <span class="zoom-hint">🔍 Click to enlarge</span>
+        </div>
+        <div class="map-caption">
+          Emergency exits are located on <strong>all four sides</strong> of the Covered Courts.
+          In case of emergency, take the <strong>nearest exit</strong> and proceed to the designated assembly area.
+        </div>
+      </div>
+
+    </div><!-- /.map-gallery -->
+
+    <div class="notice" style="margin-top:1rem;">
+      <strong>How to add your images:</strong><br>
+      Save your image files in the same folder as <code>index.html</code> using these exact filenames:<br><br>
+      <code style="display:block;margin:4px 0;background:#fff3cd;padding:4px 8px;border-radius:4px;">map_gates_parking.jpg</code>
+      <code style="display:block;margin:4px 0;background:#fff3cd;padding:4px 8px;border-radius:4px;">map_evacuation_areas.jpg</code>
+      <code style="display:block;margin:4px 0;background:#fff3cd;padding:4px 8px;border-radius:4px;">diagram_emergency_exits.jpg</code>
+      Supported formats: <strong>.jpg</strong>, <strong>.jpeg</strong>, <strong>.png</strong>, <strong>.webp</strong>
+      (update the <code>src</code> attribute in the HTML if you use a different extension or filename).
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox overlay -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-caption"></div>
+</div>
+
+<div style="text-align:center;margin-top:1.5rem;font-size:13px;color:#555;padding:0 1rem 1rem;">
+  <div style="font-weight:700;">SGD. ERIC JOSE S. RUDINAS</div>
+  <div>Overall Chair, Executive Committee</div>
+  <div style="margin-top:0.75rem;font-weight:700;">APPROVED:</div>
+  <div style="margin-top:0.25rem;font-weight:700;">SGD. ROGELIO L. GAWAHAN, PhD</div>
+  <div>Principal</div>
+</div>
+
+</main>
+
+<footer>Xavier Ateneo Senior High School &nbsp;·&nbsp; Commencement Exercises SY 2025–2026</footer>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const isOpen = header.classList.contains('open');
+  header.classList.toggle('open', !isOpen);
+  body.classList.toggle('visible', !isOpen);
+}
+function toggleSub(header) {
+  const body = header.nextElementSibling;
+  const isOpen = body.classList.contains('visible');
+  header.querySelector('.chevron').style.transform = isOpen ? '' : 'rotate(180deg)';
+  body.classList.toggle('visible', !isOpen);
+}
+
+function placeholderHTML(filename, description) {
+  return `<div class="map-img-placeholder">
+    <div class="ph-icon">🖼️</div>
+    <div class="ph-filename">${filename}</div>
+    <div style="font-size:13px;color:#555;max-width:480px;text-align:center;margin-top:4px;">${description}</div>
+    <div class="ph-hint">Place this image file in the same folder as index.html to display it here.</div>
+  </div>`;
+}
+
+function openLightbox(wrap) {
+  const img = wrap.querySelector('img');
+  if (!img) return;
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lb-img').src = img.src;
+  document.getElementById('lb-img').alt = img.alt;
+  document.getElementById('lb-caption').textContent = img.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+</body>
+</html>
